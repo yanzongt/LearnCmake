@@ -1,0 +1,5 @@
+message("define a testFun below")
+function(testFun)
+    message(INFO "testFun is called")
+endfunction()
+message("======")

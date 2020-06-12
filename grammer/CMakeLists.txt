@@ -1,0 +1,10 @@
+# test if
+message("test if in")
+set(CAF_LOG_LEVEL "QUIET")
+set(CAF_VALID_LOG_LEVELS QUIET ERROR WARNING INFO DEBUG TRACE)
+if(NOT CAF_LOG_LEVEL IN_LIST CAF_VALID_LOG_LEVELS)
+    message(FATAL_ERROR "Invalid log level: \"${CAF_LOG_LEVEL}\"")
+else()
+    message("log level is: " ${CAF_LOG_LEVEL})
+endif()
+message("======")
